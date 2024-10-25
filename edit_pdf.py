@@ -17,7 +17,7 @@ def create_watermark(text, x, y, angle):
     pdfmetrics.registerFont(TTFont('Times New Roman', 'TNR.ttf'))
 
     c.translate(x, y)  # Перемещение начала координат
-    c.rotate(angle)  # Поворот текста на 270 градусов
+    c.rotate(angle)  # Поворот текста на angle градусов
 
     c.setFont('Times New Roman', 14)
     c.drawString(0, 0, text)
@@ -147,15 +147,15 @@ def main():
     text_entry.pack(pady=5)
 
     # Поля для ввода координат X и Y
-    tk.Label(root, text="Координата X(14):").pack(pady=5)
+    tk.Label(root, text="Координата X(48):").pack(pady=5)
     x_entry = tk.Entry(root)
     x_entry.pack(pady=5)
 
-    tk.Label(root, text="Координата Y(10):").pack(pady=5)
+    tk.Label(root, text="Координата Y(520):").pack(pady=5)
     y_entry = tk.Entry(root)
     y_entry.pack(pady=5)
 
-    tk.Label(root, text="Угол поворота:").pack(pady=5)
+    tk.Label(root, text="Угол поворота(90):").pack(pady=5)
     angle_entry = tk.Entry(root)
     angle_entry.pack(pady=5)
 
